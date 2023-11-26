@@ -3,6 +3,7 @@
 import React from "react";
 import TypeWriter from "typewriter-effect";
 import { FaTwitter, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 const LandingPage = () => {
   const circleStyles: React.CSSProperties = {
@@ -11,17 +12,15 @@ const LandingPage = () => {
     backgroundColor: "#00d8ff", // Blue color, you can change it
     borderRadius: "100%",
     boxShadow: "0 0 30px 20px rgba(52, 152, 219, 0.7)", // Adjust the glow effect
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'hidden', // Clip the image to the circle shape
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden", // Clip the image to the circle shape
   };
 
   const imageStyles: React.CSSProperties = {
-    maxWidth: '150%',
-    maxHeight: '150%',
-    marginBottom: ' 100px',
-    borderRadius: '10px', // Ensure the image is also circular
+    marginBottom: " 100px",
+    borderRadius: "10px", // Ensure the image is also circular
   };
 
   const handleDownload = () => {
@@ -95,9 +94,11 @@ const LandingPage = () => {
         {/* Right Section */}
         <div>
           <div style={circleStyles}>
-            <img
-              src="/profile-pic.png" // Path to your image with a transparent background
+            <Image
+              src="/profile-pic.png"
               alt="Your Image"
+              width={350}
+              height={350}
               style={imageStyles}
             />
           </div>
